@@ -1,0 +1,18 @@
+<div class="h-16 flex flex-row items-center m-2">
+  <app-play-button
+    class="h-full"
+    [playing]="(playing$ | async) ?? false"
+    (play)="play()"
+    (pause)="pause()"
+  ></app-play-button>
+  <p class="attribution">
+    "{{ item.title }}" by {{ item.artist }}
+    <br />
+    licensed under
+    <a class="underline" href="{{ item.licenseUrl }}">{{ item.license }} </a>.
+  </p>
+</div>
+<div
+  [class.active]="playing$ | async"
+  class="h-2 bg-slate-500 rounded-b-lg"
+></div>

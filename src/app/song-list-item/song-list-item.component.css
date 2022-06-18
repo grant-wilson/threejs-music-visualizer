@@ -1,0 +1,13 @@
+.active {
+  background: linear-gradient(
+    to right,
+    white,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    purple,
+    black
+  );
+}
